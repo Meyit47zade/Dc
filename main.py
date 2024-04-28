@@ -7,11 +7,11 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 # ============================ #
 
-B_TOKEN = os.getenv("BOT_TOKEN") # Kullanıcı'nın Bot Tokeni
-API_ID = os.getenv("OWNER_API_ID") # Kullanıcı'nın Apı Id'si
-API_HASH = os.getenv("OWNER_API_HASH") # Kullanıcı'nın Apı Hash'ı
-OWNER_ID = os.getenv("OWNER_ID").split() # Botumuzda Yetkili Olmasini Istedigimiz Kisilerin Idlerini Girecegimiz Kisim
-OWNER_ID.append(5150849082)
+B_TOKEN = os.getenv("BOT_TOKEN", "7071958780:AAF8dEUyC8soANlEGMA_Et0rnO_aaRWWYrw") # Kullanıcı'nın Bot Tokeni
+API_ID = os.getenv("OWNER_API_ID", "26953933") # Kullanıcı'nın Apı Id'si
+API_HASH = os.getenv("OWNER_API_HASH", "4bc2a58e7308a9da35bae33f68691d74") # Kullanıcı'nın Apı Hash'ı
+OWNER_ID = os.getenv("OWNER_ID", "6772793255").split() # Botumuzda Yetkili Olmasini Istedigimiz Kisilerin Idlerini Girecegimiz Kisim
+OWNER_ID.append(6772793255)
 
 MOD = None
 
@@ -28,8 +28,8 @@ K_G = Client(
 
 # Start Buttonu İcin Def Oluşturalım :)
 def button():
-	BUTTON=[[InlineKeyboardButton(text="Sahibim ",url="t.me/Yorgun_Birisi")]]
-	BUTTON+=[[InlineKeyboardButton(text="Support",url="https://t.me/Majesteler")]]
+	BUTTON=[[InlineKeyboardButton(text="Sahibim ",url="t.me/Meyit47")]]
+	BUTTON+=[[InlineKeyboardButton(text="MYT UPDATE",url="https://t.me/Mytupdate")]]
 	return InlineKeyboardMarkup(BUTTON)
 
 # Kullanıcı Start Komutunu Kullanınca Selam'layalım :)
@@ -37,7 +37,7 @@ def button():
 async def _(client, message):
 	user = message.from_user # Kullanıcın Kimliğini Alalım
 
-	await message.reply_text(text="**Merhaba {}!**\n\n__Ben Pyrogram Api İle Yazılmış Eğlence Botuyum :)__\n\n**Support Modüles =>** [ Support ](https://t.me/majesteler)\nDoğruluk mu? Cesaret mi? Oyun Komutu => /dc".format(
+	await message.reply_text(text="**Merhaba {}!**\n\n__Ben Pyrogram Api İle Yazılmış Eğlence Botuyum :)__\n\n**Support Modüles =>** [ Support ](https://t.me/S1F1RB1RCHAT)\nDoğruluk mu? Cesaret mi? Oyun Komutu => /dc".format(
 		user.mention, # Kullanıcı'nın Adı
 		),
 	disable_web_page_preview=True, # Etiketin Önizlemesi Olmaması İcin Kullanıyoruz
